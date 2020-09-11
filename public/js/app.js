@@ -18,7 +18,7 @@ weatherForm.addEventListener('submit', (e)=> {
         if(data.error) {
             par1.textContent = data.error;
         } else {
-            par1.textContent = `The weather is ${data.weatherCondition} and the temperature is ${data.temperature} but feels like ${data.feelsLike}`;
+            par1.textContent = `The weather is ${data.weatherCondition} and the temperature is ${data.temperature} but feels like ${data.feelsLike} and humidity is ${data.humidity}`;
             par2.textContent = data.location;
         }
     });

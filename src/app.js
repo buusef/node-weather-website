@@ -72,7 +72,7 @@ app.get('/weather', ({query},res)=>{
             return res.send({error});
         }
 
-        forcast(latitude, longitude, (error, {weatherCondition, temperature, feelsLike}={})=>{
+        forcast(latitude, longitude, (error, {weatherCondition, temperature, feelsLike, humidity}={})=>{
             if(error) {
                 return res.send({error});
             }
@@ -81,7 +81,8 @@ app.get('/weather', ({query},res)=>{
                 location,
                 weatherCondition,
                 temperature,
-                feelsLike
+                feelsLike,
+                humidity
             });
         })
     });
