@@ -56,7 +56,7 @@ app.get('/message', (req,res)=>{
     })
 })
 
-//served from app.js
+//served from app.js directly
 app.get('/weather', ({query},res)=>{
     
     if (!query.address) {
